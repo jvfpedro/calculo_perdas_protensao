@@ -1,31 +1,38 @@
-# Cálculo de Perdas em Concreto Protendido�
+# Prestressed Concrete Loss Calculation
 
-Este repositório contém scripts desenvolvidos em Python para automatizar o cálculo de perdas de protensão em vigas de concreto, seguindo normativas de Engenharia Civil.
+This is a study project for the *Civil Engineering* course. The goal of this code is to automate the calculation of prestressed concrete losses in beams, following standard Civil Engineering regulations.
 
-O projeto foi desenvolvido para auxiliar no dimensionamento e verificação de estruturas, calculando tanto as perdas que ocorrem no ato da protensão quanto as que ocorrem ao longo da vida útil da estrutura.
+The project assists in the dimensioning and verification of structures by calculating both immediate losses (occurring during prestressing) and time-dependent progressive losses.
 
-## Estrutura dos Arquivos
+## Features
+- **Immediate Losses:** calculates losses due to friction, anchorage slip (considering different slip hypotheses), and immediate elastic shortening of concrete.
+- **Progressive Losses:** calculates time-dependent losses including concrete shrinkage (considering humidity and notional size) and concrete creep.
+- **Relaxation:** calculates the loss due to the relaxation of the prestressing steel.
+- **Automated Verification:** outputs the results in kN for quick structural analysis.
 
-* **`perdas_imediatas.py`**: calcula as perdas que ocorrem no momento da protensão.
-    * Atrito.
-    * Acomodação da ancoragem (considerando diferentes hipóteses de escorregamento).
-    * Encurtamento elástico imediato do concreto.
-* **`perdas_prog_ret_flu.py`**: calcula as perdas progressivas dependentes do tempo.
-    * Retração do concreto (considerando umidade e espessura fictícia).
-    * Fluência (deformação lenta) do concreto.
-* **`perdas_prog_relax.py`**: calcula a perda por relaxação do aço de protensão.
+## Technologies Used
+- Python 3
+- Math module (standard library for complex equations and exponential functions)
 
-## Tecnologias Utilizadas
+## File Structure
+The project is organized into three main scripts, each handling a specific type of loss:
 
-* **Python 3**
-* Biblioteca `math` para equações complexas e funções exponenciais.
+- **`perdas_imediatas.py`**:
+  - Friction losses.
+  - Anchorage slip losses.
+  - Immediate elastic shortening.
+- **`perdas_prog_ret_flu.py`**:
+  - Concrete shrinkage (time-dependent).
+  - Concrete creep (time-dependent).
+- **`perdas_prog_relax.py`**:
+  - Steel relaxation losses.
 
-## Como usar
+## Installation and Setup
+1. Ensure you have Python 3 installed on your machine.
+2. Clone this repository or download the `.py` files.
 
-1. Clone o repositório ou baixe os arquivos `.py`.
-2. Abra o arquivo desejado em sua IDE de preferência ou editor de texto.
-3. Insira os parâmetros de entrada da sua viga no início do código (ex: número de cordoalhas, área de aço, fck, etc.).
-4. Execute o script para obter os valores das perdas em kN.
+## Author
 
----
-*Desenvolvido por João Vitor Pedro*
+João Vitor Ferreira Pedro Engineering Student at UFSC GitHub: https://github.com/jvfpedro
+
+Daniel Tavare dos Anjos Engineering Student at UFSC GitHub: https://github.com/danieltanjos
